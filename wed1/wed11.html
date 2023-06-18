@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit&family=Sarabun&display=swap');
+        body {
+            background-color: rgba(230, 250, 84, 0.868);
+        }
+        h1 {
+            font-family: 'Kanit', sans-serif;
+            color: #000000;
+        }
+        p, div {
+            font-family: Sarabun, sans-serif;
+        }
+        img {
+            margin-top: 1em;
+            margin-bottom: 2em;
+        }
+        table {
+            border-style: solid;
+            border-width: 1px;
+        }
+        th, td {
+            border: 1px solid rgb(0, 0, 0);
+            padding: 8px;
+        }
+        .center {
+            text-align: center;
+        }
+        button {
+            font-family: 'Kanit', sans-serif;
+            font-size: large;
+        }               
+    </style>
+</head>
+<body>
+
+    <h1 class="center" id="header">สวัสดีชาวโลก</h1>
+    <div class="center"><button type="button" onclick="document.getElementById('header').style.color='red'">เปลื่ยนสี</button></div> 
+    <p></p>
+
+    <div class="center">
+
+    <button type="button"onclick="document.getElementById('demo').innerHTML = Date()">แสดงวันที่และเวลาปัจจุบัน.</button>
+
+    <p id="demo"></p>
+
+    <div class="center">
+        <button onclick="document.getElementById('myImage').src='รูปภาพ/Idle.png'">แมวยื่น</button>
+        <img id="myImage" src="รูปภาพ/Idle.png" width="200px">
+        <button onclick="document.getElementById('myImage').src='รูปภาพ/Slide.png'">แมวสไลด์</button>
+    <div class="center">
+
+
+
+
+        <h2>ตารางและปุ่ม</h2>
+    <button onclick="showTable()">แสดงตาราง</button>
+    <button onclick="hideTable()">ซ่อนตาราง</button>
+    
+    <table id="myTable" style="display: none;">
+        <tr>
+            <th>รายการที่ 1</th>
+            <th>รายการที่ 2</th>
+            <th>รายการที่ 3</th>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>16</td>
+            <td>32</td>
+        </tr>
+        <tr>
+            <td>64</td>
+            <td>128</td>
+            <td>256</td>
+        </tr>
+    </table>
+    
+
+    <script>
+        function showTable() {
+            var table = document.getElementById("myTable");
+            table.style.display = "table";
+        }
+
+        function hideTable() {
+            var table = document.getElementById("myTable");
+            table.style.display = "none";
+            
+        }
+   
+    </script>
+
+
+
+   <p></p><button onclick="document.getElementById('Number')">Submit</button>
+   <p id="Number"></p>
+   <form>
+    <p></p>Number 1:<br>
+    <input type="text" name="Number 1">
+    <br>
+    <p></p>Number 2:<br>
+    <input type="text" name="Number 2">
+    <p></p>Number 3:<br>
+    <input type="text" name="Number 3">
+    <br>
+  </form>
+
+</body>
+</html>
